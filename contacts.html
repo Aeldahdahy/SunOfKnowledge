@@ -116,7 +116,7 @@
 						<div class="col-lg-8 col-md-7">
 							<div class="comment-area">
 								<h3>Add Comment</h3>
-								<form id="contact-form" method="post" action="#">
+								<form id="contact-form" autocomplete="off">
 									<div class="response"></div>
 									<div class="row">
 										<div class="col-lg-6">
@@ -274,7 +274,27 @@
 
 	</div>
 
+<script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
 
+            fetch('mail.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.success);
+                } else if (data.error) {
+                    alert(data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+</script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/isotope.js"></script>
