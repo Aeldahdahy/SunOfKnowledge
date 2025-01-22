@@ -1108,11 +1108,15 @@ footer .bottom-footer .social-links {
     text-align: right;
 }
 .pager-section {
-    background: url(../img/pager-bg.png), #f2f7fd;
+    background: url(../../src/img/image19.jpeg), #f2f7fd;
+    display: flex;
+    justify-content: center;
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: center;
+    background-size: cover; /* Ensure the background image covers the entire section */
     padding: 75px 0 85px;
 }
+
 .pager-section.blog-version {
     background-image: url(https://via.placeholder.com/1340x894);
     padding: 169px 0 242px;
@@ -1137,6 +1141,7 @@ footer .bottom-footer .social-links {
     font-weight: 600;
     margin-bottom: 32px;
     margin-top: 18px;
+    z-index: 10000 !important;
 }
 .pager-section.blog-version .pager-content ul li:before {
     background-color: #fff;
@@ -1165,7 +1170,7 @@ footer .bottom-footer .social-links {
 }
 .pager-section .pager-content {
     position: relative;
-    z-index: 99;
+    z-index: 100;
 }
 .pager-section .pager-content > h2 {
     color: #2b2b2b;
@@ -1446,9 +1451,9 @@ footer .bottom-footer .social-links {
 .schedule-page .schedule-content {
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    border-left: 1px solid #e5dfdf;
     border-radius: 20px 0 0 0;
 }
 .schedule-page .schedule-content .schp-list {
@@ -3069,3 +3074,32 @@ footer .bottom-footer .social-links {
     transition: 10s;
     background-image: linear-gradient(210deg, #fdc830, #f37335);
 }
+
+
+/* filepath: /home/abdelrahman/Projects/game/SunOfKnowledge/styles.css */
+.image-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.page-image {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 10;
+}
+
