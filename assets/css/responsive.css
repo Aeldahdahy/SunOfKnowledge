@@ -256,7 +256,13 @@
         font-size: 36px;
     }
     .pager-section {
-        background: #f2f7fd;
+        background: url(../../src/img/image19.jpeg), #f2f7fd;
+        display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    padding: 75px 0 85px;
     }
     .masonary li.width5 {
         padding-left: 9.5px;
