@@ -3112,6 +3112,53 @@ footer .bottom-footer .social-links {
 .teachers .col-lg-2 {
     flex: 0 0 20%;
     max-width: 20%;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.teacher {
+    text-align: center;
+}
+
+.teacher-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.teacher-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.teacher-img:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.teacher-info h3 {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+}
+
+.teacher-info span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .teachers .col-lg-2 {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .teachers .col-lg-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 .close {
