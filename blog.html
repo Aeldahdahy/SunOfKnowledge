@@ -180,6 +180,33 @@
 								<div class="blog-post video-post">
 									<div class="blog-thumbnail">
 										<a title="">
+											<img src="./src/img/image48.jpeg" alt="" class="w-100">
+										</a>
+										<span class="category">Sun of Knowledge</span>
+										<a href="#" target="_blank" title="" class="video-play" onclick="openModal(event)"><img src="assets/img/play.png" alt=""></a>
+									</div>
+									<div class="blog-info">
+										<ul class="meta">
+											<li><a title="">22/12/2024</a></li>
+											<li><a title="">Final Exam</a></li>
+										</ul>
+										<h3><a title="">Preparing for Success: Final Exam Tips and Insights</a></h3>
+										<p>This topic can focus on guiding students through effective study strategies, the importance of time management, and the school's efforts to support them during the final exam period.</p>
+									</div>
+								</div><!--blog-post end-->								
+								<!-- Modal Structure -->
+								<div id="videoModal" class="modal">
+									<div class="modal-content">
+										<span class="close" onclick="closeModal()">&times;</span>
+										<video id="modalVideo" width="100%" controls>
+											<source src="./src/img/video1.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+								</div>
+								<div class="blog-post video-post">
+									<div class="blog-thumbnail">
+										<a title="">
 											<img src="./src/img/image32.jpeg" alt="" class="w-100">
 										</a>
 										<span class="category">Sun of Knowledge</span>
@@ -194,7 +221,7 @@
 										<p>This topic focuses on how physical education contributes to students' physical fitness, teamwork, and overall well-being, while showcasing the exciting activities and achievements in PE classes.</p>
 										
 									</div>
-								</div><!--blog-post end-->
+								</div><!--blog-post end-->							
 					</div>
 				</div>
 			</div>
@@ -286,7 +313,23 @@
 	</div>
 
 
-
+<script>
+	function openModal(event) {
+		event.preventDefault();
+		var modal = document.getElementById('videoModal');
+		var video = document.getElementById('modalVideo');
+		modal.style.display = "block";
+		video.play();
+	}
+	
+	function closeModal() {
+		var modal = document.getElementById('videoModal');
+		var video = document.getElementById('modalVideo');
+		modal.style.display = "none";
+		video.pause();
+		video.currentTime = 0;
+	}
+</script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/isotope.js"></script>
