@@ -10,8 +10,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: formData.get('message')
     };
 
-    const serviceID = 'service_t9bp3pd'; 
-    const templateID = 'template_onx4r3t';
+    const serviceID = 'service_z1b5uel'; 
+    const templateID = 'template_cs90268';
 
     console.log('Form submission:', templateParams);
     emailjs.send(serviceID, templateID, templateParams)
