@@ -5,13 +5,13 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const formData = new FormData(form);
 
     const templateParams = {
-        from_name: formData.get('name'),
-        to_email: formData.get('email'),
+        name: formData.get('name'),
+        email: formData.get('email'),
         message: formData.get('message')
     };
 
-    const serviceID = 'service_z1b5uel'; 
-    const templateID = 'template_cs90268';
+    const serviceID = 'service_l1db3ba'; 
+    const templateID = 'template_z8hucij';
 
     console.log('Form submission:', templateParams);
     emailjs.send(serviceID, templateID, templateParams)
